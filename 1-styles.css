@@ -1,0 +1,256 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+/* header */
+
+html,
+body {
+    height: 100%;
+}
+
+
+a {
+    text-decoration: none;
+}
+
+.logo-img {
+    width: 190px;
+    margin-left: 150px;
+}
+
+
+
+.container {
+    position: absolute;
+    transition: var(--animation-speed) transform;
+    top: 15px;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+
+}
+
+.banner-content {
+    background-image: url(./images/background.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-top: 300px;
+    padding-bottom: 50px;
+    color: white;
+    text-align: center;
+}
+
+.p-title {
+    margin-top: 0;
+}
+
+.p-desc {
+    width: 42%;
+    margin: 40px auto;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+}
+
+.banner-button {
+    border: none;
+    border-radius: 23px;
+    padding: 15px 30px;
+    background-color: #FF6565;
+    margin: 20px 40px;
+}
+
+.banner-button:hover {
+    background-color: #dc2222;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+.menu ul {
+    display: flex;
+}
+
+.menu ul li a {
+    margin-left: 20px;
+    color: #fff;
+}
+
+.menu ul li a:hover {
+    color: #FF6565;
+}
+
+@media (max-width: 468px) {
+    input[type="checkbox"] {
+        display: inline-block;
+    }
+
+    .menu ul {
+        display: none;
+        position: absolute;
+        text-align: center;
+        width: 100%;
+        left: -30px;
+    }
+
+    .menu ul li {
+        padding: 20px;
+        color: #fff;
+    }
+
+    #menu-toggle:checked~.menu ul {
+        display: block;
+    }
+
+    .p-desc {
+        width: 90%;
+    }
+
+    .container {
+        /* flex-direction: column; */
+        justify-content: center;
+        /* align-items: center; */
+    }
+
+    header {
+        position: absolute;
+        left: 30px;
+        width: calc(100% - 30px);
+    }
+
+    .logo-img {
+        margin-left: 0;
+    }
+
+    .hamburger-menu {
+        display: block;
+        --height: 3px;
+        --space: calc(var(--height) * 2.5);
+        --animation-speed: 300ms;
+
+        width: calc(var(--space) * 4);
+        height: calc(var(--height) + (var(--space) * 2));
+        cursor: pointer;
+
+        span,
+        span::before,
+        span::after {
+            content: '';
+            display: block;
+            height: var(--height);
+            width: 100%;
+            background-color: #fff;
+        }
+
+        span {
+            transform: translateY(var(--space));
+            transition: var(--animation-speed) var(--animation-speed) background-color;
+
+            &::before {
+                position: absolute;
+                bottom: var(--space);
+                transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) bottom;
+            }
+
+            &::after {
+                position: absolute;
+                top: var(--space);
+                transition: var(--animation-speed) transform, var(--animation-speed) var(--animation-speed) top;
+            }
+        }
+    }
+
+    #menu-toggle {
+        display: none;
+
+        &:checked+.hamburger-menu {
+            span {
+                background: transparent;
+                transition: var(--animation-speed) background-color;
+
+                &::before {
+                    transform: rotate(-45deg);
+                    bottom: 0;
+                    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) bottom;
+                }
+
+                &::after {
+                    transform: rotate(45deg);
+                    top: 0;
+                    transition: var(--animation-speed) var(--animation-speed) transform, var(--animation-speed) top;
+                }
+            }
+        }
+    }
+
+    .hamburger-menu a {
+        color: white;
+        padding: 20px;
+        margin-right: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+    .logo-img {
+        margin-left: 0;
+    }
+
+
+    .p-desc {
+        width: 95%;
+    }
+}
+
+/* Waht We Do Section*/
+
+.what-section {
+    max-width: 1000px; 
+    margin: 0 auto; 
+    padding: 60px; 
+    text-align: center;
+}
+
+.what-p {
+    text-align: center;
+    padding-top: 40px;
+    width: 80%;
+    margin: 40px auto;
+    line-height: 25px;
+    letter-spacing: 0.5px;
+}
+
+.what-items {
+    max-width: 1000px;
+    display: flex;
+    padding: 20px;
+}
+
+.what-items div {
+    padding: 30px;
+}
+
+.what-section h1 {
+    font-size: 40px;
+}
+
+.what-items h4 {
+    padding: 15px;
+}
+
+.what-items div img {
+    padding: 20px;
+}
+
+.what-img {
+    margin-top: 200px;
+}
