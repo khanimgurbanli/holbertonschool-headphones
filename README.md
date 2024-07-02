@@ -66,5 +66,3 @@ ___
 * [Font Awesom](https://fontawesome.com/)
 * [Unsplash](https://unsplash.com/) for images
 * [Stack Overflow](https://stackoverflow.com/) community
-
-#### Adjust the sections and details according to your specific project needs. This README.md provides a clear overview of the project, its purpose, how to use it, and how to contribute, adhering to best practices for open-source projects.
