@@ -212,45 +212,89 @@ input[type="checkbox"] {
 }
 
 /* Waht We Do Section*/
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
 
 .what-section {
-    max-width: 1000px; 
-    margin: 0 auto; 
-    padding: 60px; 
     text-align: center;
-}
-
-.what-p {
-    text-align: center;
-    padding-top: 40px;
-    width: 80%;
-    margin: 40px auto;
-    line-height: 25px;
-    letter-spacing: 0.5px;
-}
-
-.what-items {
-    max-width: 1000px;
-    display: flex;
-    padding: 20px;
-}
-
-.what-items div {
-    padding: 30px;
+    padding: 40px 20px;
+    background-color: #fff;
 }
 
 .what-section h1 {
-    font-size: 40px;
+    color: #2C3E50;
+    font-size: 2.5em;
+    margin-top: 80px;
+    margin-bottom: 40px;
 }
 
-.what-items h4 {
-    padding: 15px;
+
+.what-p {
+    color: #7f8c8d;
+    font-size: 1.1em;
+    max-width: 760px;
+    margin: 0 auto 80px;
+    line-height: 1.6;
 }
 
-.what-items div img {
+.what-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto 60px;
+    gap: 20px;
+}
+
+.card-div {
+    flex: 1 0 21%;
+    max-width: 200px;
     padding: 20px;
+    ;
+    text-align: center;
 }
 
-.what-img {
-    margin-top: 200px;
+.card-div img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.card-div h4 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.card-div p {
+    color: #262929;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) and (min-width: 480px) {
+    .card-div {
+        flex: 1 0 100%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .what-section h1 {
+        color: #2C3E50;
+        font-size: 2em;
+        margin-top: 80px;
+        margin-bottom: 40px;
+    }
+
+
+    .what-p {
+        color: #7f8c8d;
+        font-size: 1.1em;
+        max-width: 100%;
+        margin: 0 auto 80px;
+        line-height: 1.6;
+    }
 }
